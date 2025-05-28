@@ -33,12 +33,14 @@ export default function ContactPage() {
                 <CardDescription>Speak directly with our financial advisors</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-2xl font-bold text-blue-600 mb-2">+91 98765 43210</p>
+                <p className="text-2xl font-bold text-blue-600 mb-2">+91 99710 93683</p>
                 <p className="text-gray-600 mb-4">Mon - Sat: 9:00 AM - 7:00 PM</p>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                  <Phone className="h-4 w-4 mr-2" />
-                  Call Now
-                </Button>
+                <a href="tel:+919971093683">
+                  <Button className="w-full bg-blue-600">
+                    <Phone className="h-4 w-4 mr-2" />
+                    Call Now
+                  </Button>
+                </a>
               </CardContent>
             </Card>
 
@@ -51,15 +53,16 @@ export default function ContactPage() {
                 <CardDescription>Quick responses via WhatsApp</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-2xl font-bold text-green-600 mb-2">+91 98765 43210</p>
+                <p className="text-2xl font-bold text-green-600 mb-2">+91 99710 93683</p>
                 <p className="text-gray-600 mb-4">Available 24/7 for queries</p>
-                <Button className="w-full bg-green-600 hover:bg-green-700">
-                  <MessageCircle className="h-4 w-4 mr-2" />
-                  Chat on WhatsApp
-                </Button>
+                <a href="https://wa.me/919971093683" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-green-600">
+                    <MessageCircle className="h-4 w-4 mr-2" />
+                    Chat on WhatsApp
+                  </Button>
+                </a>
               </CardContent>
             </Card>
-
             <Card className="text-center group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
               <CardHeader>
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -114,7 +117,7 @@ export default function ContactPage() {
 
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Service Interest</label>
-                      <select className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                      <select title="service" className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         <option>Select a service</option>
                         <option>Life Insurance</option>
                         <option>Health Insurance</option>
