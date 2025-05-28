@@ -157,9 +157,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-lg mb-2">Office Address</h3>
                         <p className="text-gray-600">
-                          123 Business District
-                          <br />
-                          Mumbai, Maharashtra 400001
+                          Delhi 110085
                           <br />
                           India
                         </p>
@@ -177,11 +175,11 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-lg mb-2">Phone Numbers</h3>
                         <p className="text-gray-600">
-                          Main: +91 98765 43210
+                          Main: +91 99710 93683
                           <br />
-                          Support: +91 98765 43211
+                          Support: +91 93507 73503
                           <br />
-                          WhatsApp: +91 98765 43210
+                          WhatsApp: +91 99710 93683
                         </p>
                       </div>
                     </div>
@@ -195,13 +193,9 @@ export default function ContactPage() {
                         <Mail className="h-6 w-6 text-purple-600" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-lg mb-2">Email Addresses</h3>
+                        <h3 className="font-semibold text-lg mb-2">Email Address</h3>
                         <p className="text-gray-600">
-                          General: info@infinitygains.com
-                          <br />
-                          Support: support@infinitygains.com
-                          <br />
-                          Training: training@infinitygains.com
+                          info@infinitygains.com
                         </p>
                       </div>
                     </div>
@@ -217,11 +211,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-lg mb-2">Business Hours</h3>
                         <p className="text-gray-600">
-                          Monday - Friday: 9:00 AM - 7:00 PM
-                          <br />
-                          Saturday: 9:00 AM - 5:00 PM
-                          <br />
-                          Sunday: Closed
+                          Monday - Saturday: 9:00 AM - 7:00 PM
                         </p>
                       </div>
                     </div>
