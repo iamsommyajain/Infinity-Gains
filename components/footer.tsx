@@ -119,15 +119,15 @@ export default function Footer() {
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-400">+91 98765 43210</span>
+                <span className="text-gray-400">+91 99710 93683</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-400">info@infinitygains.com</span>
+                <span className="text-gray-400">info@infinitygains.in</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-blue-400 mt-1" />
-                <span className="text-gray-400">123 Business District, Mumbai, Maharashtra 400001</span>
+                <span className="text-gray-400">Delhi, India</span>
               </div>
             </div>
 
