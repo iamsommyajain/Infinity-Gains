@@ -1,7 +1,70 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { TrendingUp, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+} from "lucide-react";
+
+// SocialLinks as a separate component
+function SocialLinks() {
+  const socialLinks = [
+    {
+      icon: Youtube,
+      name: "YouTube",
+      url: "https://www.youtube.com/@infinitygainsllp",
+    },
+    {
+      icon: Instagram,
+      name: "Instagram",
+      url: "https://www.instagram.com/infinity_gains_llp/",
+    },
+    {
+      icon: Linkedin,
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/deepak-jain-55507413a/",
+    },
+    {
+      icon: Facebook,
+      name: "Facebook",
+      url: "https://www.facebook.com/infinitygainsllp/",
+    },
+    {
+      icon: Twitter,
+      name: "Twitter",
+      url: "https://x.com/infinity_llp",
+    },
+  ];
+
+  return (
+    <div className="flex space-x-4">
+      {socialLinks.map(({ icon: Icon, name, url }) => (
+        <a
+          key={name}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={name}
+        >
+          <Button
+            size="icon"
+            variant="outline"
+            className="border-gray-700 bg-blue-600"
+          >
+            <Icon className="h-4 w-4 " />
+          </Button>
+        </a>
+      ))}
+    </div>
+  );
+}
 
 export default function Footer() {
   return (
@@ -23,56 +86,19 @@ export default function Footer() {
               Your trusted partner for comprehensive financial solutions including insurance, mutual funds, loans, and
               professional training.
             </p>
-            <div className="flex space-x-4">
-              <Button size="icon" variant="outline" className="border-gray-700 hover:bg-blue-600">
-                <Facebook className="h-4 w-4" />
-              </Button>
-              <Button size="icon" variant="outline" className="border-gray-700 hover:bg-blue-600">
-                <Twitter className="h-4 w-4" />
-              </Button>
-              <Button size="icon" variant="outline" className="border-gray-700 hover:bg-blue-600">
-                <Linkedin className="h-4 w-4" />
-              </Button>
-              <Button size="icon" variant="outline" className="border-gray-700 hover:bg-blue-600">
-                <Instagram className="h-4 w-4" />
-              </Button>
-            </div>
+            <SocialLinks />
           </div>
 
           {/* Services */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Services</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/services/insurance" className="text-gray-400 hover:text-white transition-colors">
-                  Life Insurance
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/insurance" className="text-gray-400 hover:text-white transition-colors">
-                  Health Insurance
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/insurance" className="text-gray-400 hover:text-white transition-colors">
-                  General Insurance
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/mutual-funds" className="text-gray-400 hover:text-white transition-colors">
-                  Mutual Funds
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/loans" className="text-gray-400 hover:text-white transition-colors">
-                  Personal Loans
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/loans" className="text-gray-400 hover:text-white transition-colors">
-                  Home Loans
-                </Link>
-              </li>
+              <li><Link href="/services/insurance" className="text-gray-400 hover:text-white transition-colors">Life Insurance</Link></li>
+              <li><Link href="/services/insurance" className="text-gray-400 hover:text-white transition-colors">Health Insurance</Link></li>
+              <li><Link href="/services/insurance" className="text-gray-400 hover:text-white transition-colors">General Insurance</Link></li>
+              <li><Link href="/services/mutual-funds" className="text-gray-400 hover:text-white transition-colors">Mutual Funds</Link></li>
+              <li><Link href="/services/loans" className="text-gray-400 hover:text-white transition-colors">Personal Loans</Link></li>
+              <li><Link href="/services/loans" className="text-gray-400 hover:text-white transition-colors">Home Loans</Link></li>
             </ul>
           </div>
 
@@ -80,36 +106,12 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/training" className="text-gray-400 hover:text-white transition-colors">
-                  Agent Training
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-gray-400 hover:text-white transition-colors">
-                  WhatsApp Group
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
-                  Call Expert
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className="text-gray-400 hover:text-white transition-colors">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">
-                  Blog
-                </Link>
-              </li>
+              <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/training" className="text-gray-400 hover:text-white transition-colors">Agent Training</Link></li>
+              <li><Link href="/products" className="text-gray-400 hover:text-white transition-colors">WhatsApp Group</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Call Expert</Link></li>
+              <li><Link href="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
+              <li><Link href="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
             </ul>
           </div>
 
@@ -145,7 +147,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">© 2024 Infinity Gains LLP. All rights reserved.</p>
+          <p className="text-gray-400 text-sm">© 2025 Infinity Gains LLP. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
               Privacy Policy
@@ -160,5 +162,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
