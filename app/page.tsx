@@ -49,7 +49,7 @@ export default function HomePage() {
                   Get Started Today
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <a href="tel:+919971004615">
+                <a href="tel:+919971093683">
                   <Button size="lg" variant="outline"
                     className="border-white/30 text-black hover:bg-white/10"
                   >

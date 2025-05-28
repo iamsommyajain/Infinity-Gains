@@ -53,10 +53,10 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+            <a href="tel:+919971093683"><Button variant="outline" size="sm">
               <Phone className="h-4 w-4 mr-2" />
               Call Expert
-            </Button>
+            </Button></a>
             <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
               Get Started
             </Button>
