@@ -1,3 +1,6 @@
+"use client"
+import emailjs from "emailjs-com"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -6,6 +9,64 @@ import { Badge } from "@/components/ui/badge"
 import { Phone, Mail, MapPin, Clock, MessageCircle, Calendar } from "lucide-react"
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    // Simple Validation
+    if (!formData.firstName || !formData.email || !formData.message) {
+      alert("Please fill in all required fields (First Name, Email, Message)")
+      return
+    }
+
+    emailjs
+  .send(
+    "service_79xknon",       // replace with your actual service ID
+    "template_9p9vyfm",      // replace with your template ID
+    {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      service: formData.service,
+      message: formData.message,
+    },
+    "lqKIgI9A_-zB6JZaJ" // (public key) from EmailJS dashboard → Account → API Keys
+  )
+  .then(
+    () => {
+      alert("Message sent successfully!")
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+      })
+    },
+    (error) => {
+      console.error("FAILED...", error)
+      alert("Something went wrong. Please try again.")
+    }
+  )
+
+    alert("Message sent successfully!")
+  }
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -14,8 +75,7 @@ export default function ContactPage() {
           <Badge className="mb-4 bg-green-500/20 text-green-300 border-green-500/30">Contact Us</Badge>
           <h1 className="text-5xl font-bold mb-6">Get In Touch With Our Experts</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Ready to start your financial journey? Our team of experts is here to help you make informed decisions about
-            your financial future.
+            Ready to start your financial journey? Our team of experts is here to help you make informed decisions about your financial future.
           </p>
         </div>
       </section>
@@ -24,6 +84,7 @@ export default function ContactPage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Call */}
             <Card className="text-center group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
               <CardHeader>
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -44,6 +105,7 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
+            {/* WhatsApp */}
             <Card className="text-center group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
               <CardHeader>
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -63,6 +125,8 @@ export default function ContactPage() {
                 </a>
               </CardContent>
             </Card>
+
+            {/* Meeting */}
             <Card className="text-center group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
               <CardHeader>
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -72,7 +136,7 @@ export default function ContactPage() {
                 <CardDescription>Book a personalized consultation</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-lg font-semibold text-purple-600 mb-2">Free Consultation</p>
+                <p className="text-lg font-semibold text-purple-600 mb-2">Personalized Consultation</p>
                 <p className="text-gray-600 mb-4">30-minute expert session</p>
                 <Button className="w-full bg-purple-600 hover:bg-purple-700">
                   <Calendar className="h-4 w-4 mr-2" />
@@ -88,36 +152,36 @@ export default function ContactPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Form */}
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
               <Card className="border-0 shadow-lg">
                 <CardContent className="p-8">
-                  <form className="space-y-6">
+                  <form className="space-y-6" onSubmit={handleSubmit}>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                        <Input placeholder="Enter your first name" />
+                        <Input name="firstName" value={formData.firstName} onChange={handleChange} placeholder="Enter your first name" />
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                        <Input placeholder="Enter your last name" />
+                        <Input name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Enter your last name" />
                       </div>
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                      <Input type="email" placeholder="Enter your email" />
+                      <Input name="email" type="email" value={formData.email} onChange={handleChange} placeholder="Enter your email" />
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                      <Input type="tel" placeholder="Enter your phone number" />
+                      <Input name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="Enter your phone number" />
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Service Interest</label>
-                      <select title="service" className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                      <select title="service" name="service" value={formData.service} onChange={handleChange} className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         <option>Select a service</option>
                         <option>Life Insurance</option>
                         <option>Health Insurance</option>
@@ -132,10 +196,10 @@ export default function ContactPage() {
 
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                      <Textarea placeholder="Tell us about your requirements..." rows={4} />
+                      <Textarea name="message" value={formData.message} onChange={handleChange} placeholder="Tell us about your requirements..." rows={4} />
                     </div>
 
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
+                    <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
                       Send Message
                     </Button>
                   </form>
@@ -143,7 +207,7 @@ export default function ContactPage() {
               </Card>
             </div>
 
-            {/* Contact Information */}
+            {/* Info Section (unchanged) */}
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
 
@@ -195,7 +259,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-lg mb-2">Email Address</h3>
                         <p className="text-gray-600">
-                          info@infinitygains.com
+                          info@infinitygains.in
                         </p>
                       </div>
                     </div>
@@ -285,3 +349,4 @@ export default function ContactPage() {
     </div>
   )
 }
+            
