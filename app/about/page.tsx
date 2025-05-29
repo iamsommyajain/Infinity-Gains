@@ -184,47 +184,12 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Rajesh Sharma",
+                name: "Deepak Jain",
                 position: "Founder & CEO",
                 experience: "15+ Years",
                 specialization: "Financial Planning & Strategy",
                 qualifications: "MBA Finance, CFP",
-              },
-              {
-                name: "Priya Patel",
-                position: "Head of Insurance",
-                experience: "12+ Years",
-                specialization: "Life & Health Insurance",
-                qualifications: "IRDA Licensed, FLMI",
-              },
-              {
-                name: "Amit Kumar",
-                position: "Investment Advisor",
-                experience: "10+ Years",
-                specialization: "Mutual Funds & Portfolio Management",
-                qualifications: "CFA, NISM Certified",
-              },
-              {
-                name: "Sunita Gupta",
-                position: "Training Head",
-                experience: "8+ Years",
-                specialization: "Agent Development & Training",
-                qualifications: "MBA HR, Certified Trainer",
-              },
-              {
-                name: "Vikash Singh",
-                position: "Loan Specialist",
-                experience: "9+ Years",
-                specialization: "Personal & Business Loans",
-                qualifications: "Banking Professional",
-              },
-              {
-                name: "Meera Joshi",
-                position: "Client Relations Manager",
-                experience: "7+ Years",
-                specialization: "Customer Service & Support",
-                qualifications: "MBA Marketing",
-              },
+              }
             ].map((member, index) => (
               <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
                 <CardHeader className="text-center">
@@ -385,10 +350,10 @@ export default function AboutPage() {
                     </p>
                     <div className="space-y-2 text-sm">
                       <p>
-                        <strong>Phone:</strong> +91 98765 43210
+                        <strong>Phone:</strong> +91 99710 93683
                       </p>
                       <p>
-                        <strong>Email:</strong> mumbai@infinitygains.com
+                        <strong>Email:</strong> info@infinitygains.in
                       </p>
                       <p>
                         <strong>Hours:</strong> Mon-Sat 9:00 AM - 7:00 PM

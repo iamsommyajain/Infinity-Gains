@@ -1,3 +1,4 @@
+'use client'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -70,7 +71,11 @@ export default function ServicesPage() {
                     Pension Plans
                   </li>
                 </ul>
-                <Button className="w-full">Learn More</Button>
+                <Button
+                  className="w-full"
+                  onClick={() => window.open("https://youtu.be/HWtF1NFNAWU?si=iNxifFQm6UHZP4zG", "_blank")}>
+                  Learn More
+                </Button>
               </CardContent>
             </Card>
 
@@ -101,7 +106,11 @@ export default function ServicesPage() {
                     Senior Citizen Plans
                   </li>
                 </ul>
-                <Button className="w-full">Learn More</Button>
+                <Button
+                  className="w-full"
+                  onClick={() => window.open("https://youtu.be/67qRWC5bhSI?si=3Odmla8aJ5CAlmsH", "_blank")}>
+                  Learn More
+                </Button>
               </CardContent>
             </Card>
 
