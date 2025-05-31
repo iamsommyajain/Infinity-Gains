@@ -7,27 +7,28 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-purple-900 text-white py-20">
+      <section className="bg-[url('/igbg1.png')] bg-cover bg-center text-white py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <Badge className="bg-green-500/20 text-green-300 border-green-500/30 w-fit">About Us</Badge>
+              {/* <Badge className="bg-green-500/20 text-green-300 border-green-500/30 w-fit">About Us</Badge> */}
               <h1 className="text-5xl font-bold leading-tight">
-                Building Financial
+                {/* Building Financial */}
                 <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
                   {" "}
-                  Futures
+                  {/* Futures */}
                 </span>
                 <br />
-                Since 2015
+                {/* Since 2015 */}
               </h1>
-              <p className="text-xl text-blue-100 leading-relaxed">
+              {/* <p className="text-xl text-blue-100 leading-relaxed">
                 At Infinity Gains LLP, we believe that everyone deserves financial security and the opportunity to build
                 wealth. Our mission is to make financial services accessible, understandable, and profitable for all.
-              </p>
+              </p> */}
+              <br /><br /><br /><br /><br /><br /><br /><br />
             </div>
             <div className="relative">
-              <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
+              {/* <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
                     <div className="text-4xl font-bold text-green-400">9+</div>
@@ -46,8 +47,8 @@ export default function AboutPage() {
                     <div className="text-sm text-blue-200">Certified Agents</div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </div>*/}
+            </div> 
           </div>
         </div>
       </section>
