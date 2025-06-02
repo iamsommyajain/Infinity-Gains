@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { Belleza } from 'next/font/google'; 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
@@ -14,77 +15,37 @@ import {
   CheckCircle,
 } from "lucide-react"
 
+const belleza = Belleza({ subsets: ['latin'], weight: '400' });
+
 export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      {/* <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white overflow-hidden"> */}
-      <section className="bg-[url('/igbg1.png')] bg-cover bg-center text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute inset-0">
-          {/* <div className="absolute top-20 left-20 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div> */}
-        </div>
+      <section
+  className="relative bg-[url('/igbg2.png')] bg-cover bg-center min-h-screen flex items-center justify-center">
+  {/* Content container */}
+  <div className="relative z-10 text-center max-w-3xl px-4">
+    <h1 className={`${belleza.className} text-black text-5xl font-bold mb-2`}>
+      INFINITY GAINS LLP
+    </h1>
+    <h1 className={`${belleza.className} text-black text-2xl font-bold mb-4`}>Your partner in financial success!</h1>
+    <p className={`${belleza.className} text-black text-2xl mb-6`}>
+      Insurance | Mutual Funds | Loans
+    </p>
 
-        <div className="relative container mx-auto px-4 py-20 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in">
-              {/* <Badge className="bg-green-500/20 text-green-300 border-green-500/30 w-fit">
-                Your Trusted Financial Partner
-              </Badge> */}
-              
-              {/* <p className="text-xl text-blue-100 leading-relaxed">
-                Your gateway to financial freedom through expert insurance, mutual funds, loans, and professional
-                training services.
-              </p> */}
-              {/* <br /><br /><br /><br /><br /><br /> */}
-              <div className="mt-40"> {/* or py-40, depending on layout */} </div>
+    <div className="flex justify-center gap-4">
+      <Button className="bg-green-500 text-white px-6 py-3 rounded-md flex items-center gap-2 hover:bg-green-600 transition">
+        Get Started Today
+        <ArrowRight className="w-5 h-5" />
+      </Button>
+      <Button className="bg-white text-black px-6 py-3 rounded-md flex items-center gap-2 hover:bg-gray-200 transition">
+        <Phone className="w-5 h-5" />
+        Call Expert
+      </Button>
+    </div>
+  </div>
+</section>
 
-              <div className="flex justify-center mt-10">
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white group">
-                      Get Started Today
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                    <a href="tel:+919971093683">
-                      <Button
-                        size="lg"
-                        variant="outline"
-                        className="border-white/30 text-black hover:bg-white/10"
-                      >
-                        <Phone className="mr-2 h-5 w-5" />
-                        Call Expert
-                      </Button>
-                    </a>
-                  </div>
-              </div>
-
-            </div>
-            <div className="relative">
-              {/* <div className="relative z-10 bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-green-400">1000+</div>
-                    <div className="text-sm text-blue-200">Happy Clients</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-green-400">₹10Cr+</div>
-                    <div className="text-sm text-blue-200">Assets Managed</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-green-400">100+</div>
-                    <div className="text-sm text-blue-200">Trained Agents</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-green-400">24/7</div>
-                    <div className="text-sm text-blue-200">Support</div>
-                  </div>
-                </div>
-              </div> */}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
@@ -333,5 +294,5 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  )
+  ); 
 }
