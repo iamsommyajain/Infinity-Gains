@@ -22,7 +22,7 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-  className="relative bg-[url('/igbg2.png')] bg-cover bg-center min-h-screen flex items-center justify-center">
+  className="relative bg-[url('/igbg6.png')] bg-cover bg-center h-[80vh] flex items-center justify-center">
   {/* Content container */}
   <div className="relative z-10 text-center max-w-3xl px-4">
     <h1 className={`${belleza.className} text-black text-5xl font-bold mb-2`}>
@@ -38,10 +38,13 @@ export default function HomePage() {
         Get Started Today
         <ArrowRight className="w-5 h-5" />
       </Button>
+      <a href="tel:+911234567890">
       <Button className="bg-white text-black px-6 py-3 rounded-md flex items-center gap-2 hover:bg-gray-200 transition">
-        <Phone className="w-5 h-5" />
-        Call Expert
-      </Button>
+          <Phone className="w-5 h-5" />
+          Call Expert
+        </Button>
+      </a>
+
     </div>
   </div>
 </section>
