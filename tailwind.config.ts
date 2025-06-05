@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss"
-
 const config: Config = {
   darkMode: ["class"],
   content: [
@@ -20,6 +19,7 @@ const config: Config = {
     },
     extend: {
       colors: {
+        'light-green-custom': '#c1ff72',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
