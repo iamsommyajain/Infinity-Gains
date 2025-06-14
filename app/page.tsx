@@ -17,35 +17,41 @@ import {
   Instagram,
   Linkedin,
   Facebook,
-  Twitter
+  Twitter,
+  Youtube
 } from "lucide-react"
 
 const belleza = Belleza({ subsets: ['latin'], weight: '400' });
 
 const socialLinks = [
   {
-    href: "https://wa.me/9971093683",
+    href: "https://wa.me/+919971093683",
     icon: MessageCircle,
     bg: "bg-green-500",
   },
   {
-    href: "https://linkedin.com/company/infinity-gains",
+    href: "https://www.linkedin.com/in/deepak-jain-55507413a/",
     icon: Linkedin,
     bg: "bg-blue-700",
   },
   {
-    href: "https://instagram.com/infinitygains",
+    href: "https://www.instagram.com/infinity_gains_llp/",
     icon: Instagram,
     bg: "bg-pink-500",
   },
   {
-    href: "https://facebook.com/infinitygains",
+    href: "https://www.facebook.com/infinitygainsllp/",
     icon: Facebook,
     bg: "bg-blue-600",
   },
   {
-    href: "https://x.com/infinitygains",
+    href: "https://x.com/infinity_llp",
     icon: Twitter,
+    bg: "bg-black",
+  },
+  {
+    href: "https://www.youtube.com/@infinitygainsllp",
+    icon: Youtube,
     bg: "bg-black",
   },
 ];
