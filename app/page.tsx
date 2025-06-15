@@ -52,7 +52,7 @@ const socialLinks = [
   {
     href: "https://www.youtube.com/@infinitygainsllp",
     icon: Youtube,
-    bg: "bg-black",
+    bg: "bg-red-600",
   },
 ];
 
