@@ -86,7 +86,7 @@ export default function Navbar() {
                   <Button variant="outline" className="w-full">
                     Sign Up
                   </Button></Link>
-                  <Link href="/auth/login"></Link><Button className="w-full bg-blue-600 hover:bg-blue-700">Log In</Button>
+                  <Link href="/auth/login"><Button className="w-full bg-blue-600 hover:bg-blue-700">Log In</Button></Link>
                 </div>
               </div>
             </SheetContent>
