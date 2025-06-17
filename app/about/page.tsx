@@ -2,56 +2,43 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Users, Target, Award, TrendingUp, Shield, Heart, CheckCircle, Calendar, MapPin } from "lucide-react"
+import { Belleza } from 'next/font/google'; 
+import {ArrowRight, Phone} from "lucide-react"
+
+const belleza = Belleza({ subsets: ['latin'], weight: '400' });
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-[url('/igbg1.png')] bg-cover bg-center text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              {/* <Badge className="bg-green-500/20 text-green-300 border-green-500/30 w-fit">About Us</Badge> */}
-              <h1 className="text-5xl font-bold leading-tight">
-                {/* Building Financial */}
-                <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-                  {" "}
-                  {/* Futures */}
-                </span>
-                <br />
-                {/* Since 2015 */}
-              </h1>
-              {/* <p className="text-xl text-blue-100 leading-relaxed">
-                At Infinity Gains LLP, we believe that everyone deserves financial security and the opportunity to build
-                wealth. Our mission is to make financial services accessible, understandable, and profitable for all.
-              </p> */}
-              <br /><br /><br /><br /><br /><br /><br /><br />
-            </div>
-            <div className="relative">
-              {/* <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
-                <div className="grid grid-cols-2 gap-6 text-center">
-                  <div>
-                    <div className="text-4xl font-bold text-green-400">9+</div>
-                    <div className="text-sm text-blue-200">Years Experience</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-bold text-green-400">500+</div>
-                    <div className="text-sm text-blue-200">Happy Clients</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-bold text-green-400">₹50Cr+</div>
-                    <div className="text-sm text-blue-200">Assets Under Management</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-bold text-green-400">100+</div>
-                    <div className="text-sm text-blue-200">Certified Agents</div>
-                  </div>
-                </div>
-              </div>*/}
-            </div> 
-          </div>
-        </div>
-      </section>
+
+  <section className="relative bg-[url('/igbg7.png')] bg-cover bg-center h-[80vh] flex items-center justify-center">
+  {/* Content container */}
+  <div className="absolute top-1/2 left-0 w-full transform -translate-y-1/2 bg-light-green-custom bg-opacity-80 h-[300px] z-10"></div>
+
+  <div className="relative z-10 text-center max-w-3xl px-4">
+    <h1 className={`${belleza.className} text-black text-5xl font-bold mb-2`}>
+      INFINITY GAINS LLP
+    </h1>
+    <h1 className={`${belleza.className} text-black text-2xl font-bold mb-4`}>Your partner in financial success!</h1>
+    <p className={`${belleza.className} text-black text-2xl mb-6`}>
+      Insurance | Mutual Funds | Loans
+    </p>
+    
+    <div className="flex justify-center gap-4">
+      <Button className="bg-green-500 text-white px-6 py-3 rounded-md flex items-center gap-2 hover:bg-green-600 transition">
+        Get Started Today
+        <ArrowRight className="w-5 h-5" />
+      </Button>
+      <a href="tel:+911234567890">
+      <Button className="bg-white text-black px-6 py-3 rounded-md flex items-center gap-2 hover:bg-gray-200 transition">
+          <Phone className="w-5 h-5" />
+          Call Expert
+        </Button>
+      </a>
+    </div>
+  </div>
+</section>
 
       {/* Our Story */}
       <section className="py-20 bg-white">
@@ -325,80 +312,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Office Locations */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Offices</h2>
-            <p className="text-xl text-gray-600">Visit us at our convenient locations across the city.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-xl mb-2">Head Office</h3>
-                    <p className="text-gray-600 mb-4">
-                      123 Business District
-                      <br />
-                      Mumbai, Maharashtra 400001
-                      <br />
-                      India
-                    </p>
-                    <div className="space-y-2 text-sm">
-                      <p>
-                        <strong>Phone:</strong> +91 99710 93683
-                      </p>
-                      <p>
-                        <strong>Email:</strong> info@infinitygains.in
-                      </p>
-                      <p>
-                        <strong>Hours:</strong> Mon-Sat 9:00 AM - 7:00 PM
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-xl mb-2">Branch Office</h3>
-                    <p className="text-gray-600 mb-4">
-                      456 Commercial Complex
-                      <br />
-                      Pune, Maharashtra 411001
-                      <br />
-                      India
-                    </p>
-                    <div className="space-y-2 text-sm">
-                      <p>
-                        <strong>Phone:</strong> +91 98765 43211
-                      </p>
-                      <p>
-                        <strong>Email:</strong> pune@infinitygains.com
-                      </p>
-                      <p>
-                        <strong>Hours:</strong> Mon-Sat 9:00 AM - 6:00 PM
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -407,12 +320,15 @@ export default function AboutPage() {
             Join our family of satisfied clients and experience the Infinity Gains difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              Schedule Consultation
+            <a
+              href="https://wa.me/919971093683" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            <Button size="lg" className="bg-white text-blue-600 hover:!bg-gray-200">
+              Contact us Today
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              Learn More About Our Services
-            </Button>
+          </a>
           </div>
         </div>
       </section>
