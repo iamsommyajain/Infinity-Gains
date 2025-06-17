@@ -57,13 +57,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">The Beginning</h3>
                   <p className="text-gray-600 leading-relaxed mb-6">
-                    Infinity Gains LLP was founded in 2015 by a team of financial experts who recognized the gap between
-                    complex financial products and the common person's understanding. We started with a simple mission:
-                    to make financial planning accessible to everyone, regardless of their background or income level.
-                  </p>
-                  <p className="text-gray-600 leading-relaxed">
-                    What began as a small consultancy has grown into a comprehensive financial services company, serving
-                    hundreds of families and businesses across India.
+                  Infinity Gains LLP has been a trusted name in the world of financial services — specializing in Insurance, Mutual Funds, and Loans. Founded on the principles of education, empowerment, and ethical service, our mission is to bring financial literacy and freedom to every Indian household.At the heart of our journey is <strong>Mr. Deepak Jain</strong>, a veteran of the insurance industry and former AVP at HDFC ERGO, whose vision and passion have touched the lives of over 50 lakh insurance advisors across the country. Through his guidance, Infinity Gains has become a beacon of growth for countless professionals striving to thrive in the Life, General, and Health Insurance sectors. We don’t just offer services — we build careers. We guide, train, and motivate insurance advisors to unlock their full potential and reach new professional heights. At Infinity Gains, we believe in a simple yet powerful financial formula for all 140 crore Indians: <strong>Financial Freedom = TIP (Term Insurance Plan) + HIP (Health Insurance Plan) + SIP (Systematic Investment Plan)</strong>. <br />Join us on our mission to spread financial awareness, uplift lives, and build a stronger, more secure India.
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
