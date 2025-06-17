@@ -211,6 +211,7 @@ export default function SignUpPage() {
                             }`}
                             style={{ width: `${(strength / 5) * 100}%` }}
                           ></div>
+                          
                         </div>
                         <span className={`text-xs font-medium ${strengthInfo.color}`}>{strengthInfo.text}</span>
                       </div>
