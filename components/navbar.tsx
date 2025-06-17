@@ -53,13 +53,13 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:+919971093683"><Button variant="outline" size="sm">
-              <Phone className="h-4 w-4 mr-2" />
-              Call Expert
-            </Button></a>
+            <Link href="/auth/signup"><Button variant="outline" size="sm">
+              Sign Up
+            </Button></Link>
+            <Link href="/auth/login">
             <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
-              Get Started
-            </Button>
+              Login
+            </Button></Link>
           </div>
 
           {/* Mobile Menu */}
@@ -82,11 +82,11 @@ export default function Navbar() {
                   </Link>
                 ))}
                 <div className="pt-4 space-y-2">
+                  <Link href="/auth/signup">
                   <Button variant="outline" className="w-full">
-                    <Phone className="h-4 w-4 mr-2" />
-                    Call Expert
-                  </Button>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">Get Started</Button>
+                    Sign Up
+                  </Button></Link>
+                  <Link href="/auth/login"></Link><Button className="w-full bg-blue-600 hover:bg-blue-700">Log In</Button>
                 </div>
               </div>
             </SheetContent>

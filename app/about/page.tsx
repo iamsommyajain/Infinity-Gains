@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Users, Target, Award, TrendingUp, Shield, Heart, CheckCircle, Calendar, MapPin } from "lucide-react"
 import { Belleza } from 'next/font/google'; 
 import {ArrowRight, Phone} from "lucide-react"
+import Image from "next/image";
 
 const belleza = Belleza({ subsets: ['latin'], weight: '400' });
 
@@ -64,7 +65,7 @@ export default function AboutPage() {
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3">
                       <Calendar className="h-6 w-6 text-blue-600" />
-                      <span className="font-semibold">2015 - Company Founded</span>
+                      <span className="font-semibold">2020 - Company Founded</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Users className="h-6 w-6 text-green-600" />
@@ -153,7 +154,7 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Leadership Team</h2>
@@ -199,7 +200,43 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+      <section className="py-12 px-4 md:px-16 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-blue-700 mb-6 text-center">
+          Meet Our Founder
+        </h2>
+
+        <Card className="flex flex-col md:flex-row items-center md:items-start bg-white shadow-lg rounded-2xl overflow-hidden">
+          <div className="md:w-1/3 w-full">
+            <Image
+              src="/founder.jpg" // Replace with actual image path
+              alt="Mr. Deepak Jain"
+              width={400}
+              height={400}
+              className="object-cover w-full h-full"
+            />
+          </div>
+
+          <CardContent className="md:w-2/3 w-full p-6">
+            <CardHeader className="p-0 mb-4">
+              <CardTitle className="text-2xl text-gray-800 font-semibold">
+                Mr. Deepak Jain
+              </CardTitle>
+              <p className="text-sm text-gray-500">Founder, Infinity Gains LLP</p>
+            </CardHeader>
+
+            <p className="text-gray-700 leading-relaxed">
+              With over two decades of experience in the insurance industry, Mr. Deepak Jain is a name synonymous with trust, knowledge, and leadership. A former AVP at HDFC ERGO, he has dedicated his life to empowering over <strong>50 lakh insurance advisors</strong> across India.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed mt-4">
+              As the visionary behind <strong>Infinity Gains LLP</strong>, Mr. Jain has built more than a financial services firm — he has nurtured a movement to educate, inspire, and elevate professionals across Life, General, and Health Insurance sectors. His mission is rooted in guiding people to achieve financial freedom through TIP (Term Insurance Plan), HIP (Health Insurance Plan), and SIP (Systematic Investment Plan).
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
