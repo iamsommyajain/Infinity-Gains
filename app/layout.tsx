@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/navbar"
+import { SessionProvider } from "next-auth/react"
+import { ReactNode } from "react"
 import Footer from "@/components/footer"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -12,6 +14,10 @@ export const metadata: Metadata = {
   description:
     "Comprehensive financial services including insurance, mutual funds, loans, and professional training. Join our WhatsApp community for daily market updates.",
     generator: 'v0.dev'
+}
+
+export function Providers({ children }: { children: ReactNode }) {
+  return <SessionProvider>{children}</SessionProvider>
 }
 
 export default function RootLayout({
@@ -29,3 +35,10 @@ export default function RootLayout({
     </html>
   )
 }
+
+
+
+
+
+
+
