@@ -110,68 +110,7 @@ Navigate to [http://localhost:3000](http://localhost:3000) to view the website.
 - **Sign Up (`/auth/signup`)**: Complete registration form
 - **Sign In (`/auth/login`)**: Secure login with social options
 - **Forgot Password (`/auth/forgot-password`)**: Password reset flow
-
-## 🎨 Design System
-
-### **Color Palette**
-- **Primary Blue**: `#2563eb` - Trust and professionalism
-- **Secondary Green**: `#16a34a` - Growth and prosperity
-- **Accent Purple**: `#9333ea` - Innovation and premium feel
-- **Neutral Grays**: Various shades for text and backgrounds
-
-### **Typography**
-- **Font Family**: Inter (Google Fonts)
-- **Headings**: Bold weights (600-700)
-- **Body Text**: Regular weight (400)
-- **Responsive sizing**: Mobile-first approach
-
-### **Components**
-- **Cards**: Hover effects with shadow transitions
-- **Buttons**: Multiple variants (primary, outline, ghost)
-- **Forms**: Consistent styling with validation states
-- **Icons**: Lucide React icons throughout
-
-## 📱 Responsive Design
-
-### **Breakpoints**
-- **Mobile**: `< 768px`
-- **Tablet**: `768px - 1024px`
-- **Desktop**: `> 1024px`
-
-### **Mobile Optimizations**
-- Collapsible navigation menu
-- Touch-friendly button sizes
-- Optimized form layouts
-- Readable typography scaling
-
-## 🔧 Customization
-
-### **Colors**
-Update colors in `tailwind.config.ts`:
-\`\`\`typescript
-colors: {
-  primary: {
-    50: '#eff6ff',
-    500: '#3b82f6',
-    600: '#2563eb',
-    // ... more shades
-  }
-}
-\`\`\`
-
-### **Components**
-Modify components in the `components/` directory:
-- `navbar.tsx` - Navigation customization
-- `footer.tsx` - Footer content and links
-- `ui/` - Base UI component styling
-
-### **Content**
-Update page content in respective `page.tsx` files:
-- Company information
-- Service descriptions
-- Contact details
-- Team member profiles
-
+- 
 ## 🚀 Deployment
 
 ### **Vercel (Recommended)**
@@ -185,7 +124,7 @@ Update page content in respective `page.tsx` files:
 - **Self-hosted**: Build and serve static files
 
 ### **Build Commands**
-\`\`\`bash
+```bash
 # Production build
 npm run build
 
@@ -194,35 +133,7 @@ npm start
 
 # Export static files
 npm run export
-\`\`\`
-
-## 📊 Performance
-
-### **Lighthouse Scores**
-- **Performance**: 95+
-- **Accessibility**: 100
-- **Best Practices**: 100
-- **SEO**: 95+
-
-### **Optimizations**
-- Image optimization with Next.js Image component
-- Code splitting and lazy loading
-- Minified CSS and JavaScript
-- Efficient font loading
-
-## 🔒 Security
-
-### **Authentication**
-- Secure form handling
-- Password strength validation
-- CSRF protection ready
-- Input sanitization
-
-### **Best Practices**
-- Environment variables for sensitive data
-- Secure headers configuration
-- XSS protection
-- Content Security Policy ready
+```
 
 ## 🤝 Contributing
 
@@ -231,35 +142,18 @@ npm run export
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-### **Development Guidelines**
-- Follow TypeScript best practices
-- Use consistent naming conventions
-- Write descriptive commit messages
-- Test on multiple devices and browsers
-
+   
 ## 📞 Support
 
 ### **Technical Support**
-- **Email**: tech@infinitygains.com
-- **Phone**: +91 98765 43210
-- **WhatsApp**: +91 98765 43210
+- **Email**: info@infinitygains.in
 
 ### **Business Inquiries**
-- **Email**: info@infinitygains.com
-- **Office**: 123 Business District, Mumbai, Maharashtra 400001
+- **Email**: info@infinitygains.in
 
 ## 📄 License
 
 This project is proprietary software owned by Infinity Gains LLP. All rights reserved.
-
-## 🙏 Acknowledgments
-
-- **Next.js Team** - For the amazing React framework
-- **Tailwind CSS** - For the utility-first CSS framework
-- **Shadcn/ui** - For the beautiful component library
-- **Lucide** - For the consistent icon set
-- **Vercel** - For the deployment platform
 
 ---
 
