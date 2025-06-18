@@ -1,7 +1,7 @@
 import NextAuth from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 import { PrismaAdapter } from "@next-auth/prisma-adapter"
-import { PrismaClient } from "@prisma/client" // or wherever you generated it
+import { PrismaClient } from "@/lib/generated/prisma" // or wherever you generated it
 import { Session } from "next-auth";
 import { JWT } from "next-auth/jwt";
 import type { SessionStrategy } from "next-auth";

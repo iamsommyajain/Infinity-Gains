@@ -3,9 +3,14 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/navbar"
-import { SessionProvider } from "next-auth/react"
-import { ReactNode } from "react"
 import Footer from "@/components/footer"
+import {CustomSessionProvider} from "@/components/session-provider"
+// import { SessionProvider } from "next-auth/react";
+import { ReactNode } from "react"
+import { getServerSession } from "next-auth"
+import { authOptions } from "@/app/api/auth/[...nextauth]/route"
+// console.log("WHAT AM I IMPORTING?", CustomSessionProvider);
+// console.log("TYPE OF IMPORTED", typeof CustomSessionProvider);
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -15,31 +20,23 @@ export const metadata: Metadata = {
     "Comprehensive financial services including insurance, mutual funds, loans, and professional training. Join our WhatsApp community for daily market updates."
 }
 
-export function Providers({ children }: { children: ReactNode }) {
-  return <SessionProvider>{children}</SessionProvider>
-}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: ReactNode
 }) {
+  const session = await getServerSession(authOptions)
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        </Providers>
+         <CustomSessionProvider session={session}> 
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+         </CustomSessionProvider>  
       </body>
     </html>
   )
 }
-
-
-
-
-
-
-
