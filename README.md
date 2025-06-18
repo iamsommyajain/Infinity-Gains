@@ -4,11 +4,6 @@ Welcome to the official repository of the **Infinity Gains LLP** website — a p
 
 This website serves as an online presence for **Infinity Gains LLP**, offering details about our services in **Insurance**, **Mutual Funds**, and **Loans**.
 
-![Infinity Gains LLP](https://img.shields.io/badge/Infinity%20Gains-LLP-blue?style=for-the-badge)
-![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3-38B2AC?style=for-the-badge&logo=tailwind-css)
-
 ## 🌟 Features
 
 ### 🏠 **Core Pages**
@@ -38,74 +33,34 @@ This website serves as an online presence for **Infinity Gains LLP**, offering d
 - **Shadcn/ui** - High-quality, accessible UI components
 - **Lucide Icons** - Beautiful, consistent iconography
 
-## 📁 Project Structure
-
-\`\`\`
-infinity-gains-website/
-├── app/
-│   ├── about/
-│   │   └── page.tsx
-│   ├── auth/
-│   │   ├── login/
-│   │   │   └── page.tsx
-│   │   ├── signup/
-│   │   │   └── page.tsx
-│   │   └── forgot-password/
-│   │       └── page.tsx
-│   ├── contact/
-│   │   └── page.tsx
-│   ├── products/
-│   │   └── page.tsx
-│   ├── services/
-│   │   └── page.tsx
-│   ├── training/
-│   │   └── page.tsx
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
-├── components/
-│   ├── ui/
-│   │   ├── button.tsx
-│   │   ├── card.tsx
-│   │   ├── input.tsx
-│   │   ├── label.tsx
-│   │   ├── checkbox.tsx
-│   │   └── ...
-│   ├── navbar.tsx
-│   └── footer.tsx
-├── lib/
-│   └── utils.ts
-├── tailwind.config.ts
-├── next.config.mjs
-├── package.json
-└── README.md
-\`\`\`
-
 ## 🛠️ Installation & Setup
 
 ### Prerequisites
-- Node.js 18+ 
-- npm or yarn package manager
+- **Node.js** v18 or higher  
+- **npm** or **yarn** package manager
+
+---
 
 ### 1. Clone the Repository
-\`\`\`bash
+
+```bash
 git clone https://github.com/your-username/infinity-gains-website.git
 cd infinity-gains-website
-\`\`\`
+```
 
 ### 2. Install Dependencies
-\`\`\`bash
+```bash
 npm install
 # or
 yarn install
-\`\`\`
+```
 
 ### 3. Run Development Server
-\`\`\`bash
+```bash
 npm run dev
 # or
 yarn dev
-\`\`\`
+```
 
 ### 4. Open in Browser
 Navigate to [http://localhost:3000](http://localhost:3000) to view the website.
