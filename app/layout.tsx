@@ -12,8 +12,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Infinity Gains LLP - Your Financial Partner",
   description:
-    "Comprehensive financial services including insurance, mutual funds, loans, and professional training. Join our WhatsApp community for daily market updates.",
-    generator: 'v0.dev'
+    "Comprehensive financial services including insurance, mutual funds, loans, and professional training. Join our WhatsApp community for daily market updates."
 }
 
 export function Providers({ children }: { children: ReactNode }) {
@@ -28,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Providers>
         <Navbar />
         <main>{children}</main>
         <Footer />
+        </Providers>
       </body>
     </html>
   )
