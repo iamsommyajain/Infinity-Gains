@@ -44,16 +44,39 @@ export default function SignUpPage() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
+  e.preventDefault()
+  setIsLoading(true)
 
-    // Simulate API call
-    setTimeout(() => {
-      setIsLoading(false)
-      // Handle signup logic here
-      console.log("Signup attempt:", formData)
-    }, 2000)
+  try {
+    const response = await fetch("/api/auth/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        password: formData.password,
+      }),
+    })
+
+    const data = await response.json()
+
+    if (!response.ok) {
+      throw new Error(data.message || "Signup failed")
+    }
+
+    console.log("✅ Signup success:", data)
+    // Redirect or show success
+  } catch (error: any) {
+    console.error("❌ Signup error:", error.message || error)
+  } finally {
+    setIsLoading(false)
   }
+}
+
+
+
 
   const passwordStrength = (password: string) => {
     let strength = 0
